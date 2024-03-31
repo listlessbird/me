@@ -21,3 +21,6 @@ pnpm-debug.log*
 .DS_Store
 
 src/data/resume_data.tsx
+src/consts.ts
+public/images/
+.vercel

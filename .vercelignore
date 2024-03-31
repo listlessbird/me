@@ -1,0 +1,2 @@
+//ssr build fails with bun on vercel for some reason and it's required for og image link until i find some other solution to get it working on preview builds too
+bun.lockb

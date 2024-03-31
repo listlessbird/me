@@ -54,4 +54,4 @@ export const RESUME_DATA = {
       // logo: ObservationSystemIcon,
     },
   ],
-} as const
+}

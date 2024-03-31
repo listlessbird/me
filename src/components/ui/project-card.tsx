@@ -17,6 +17,9 @@ interface Props {
   tags: readonly string[]
   link?: string
   sourceLink?: string
+  Icon?: React.ComponentType<{
+    className?: string
+  }>
 }
 
 export function ProjectCard({
@@ -24,13 +27,15 @@ export function ProjectCard({
   description,
   tags,
   link,
+  Icon,
   sourceLink,
 }: Props) {
   return (
-    <Card className="flex flex-col overflow-hidden border border-muted p-3">
-      <CardHeader className="">
-        <div className="space-y-1">
-          <CardTitle className="text-base">
+    <Card className="flex flex-col overflow-hidden border border-muted p-3 space-y-2">
+      <CardHeader className="flex">
+        <div className="flex gap-2 items-center w-fit">
+          {!!Icon && <Icon className="size-4 self-center" />}
+          <CardTitle className="text-base self-center">
             {link ? (
               <a
                 href={link}
@@ -47,12 +52,12 @@ export function ProjectCard({
           <div className="hidden font-mono text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <CardDescription className="font-mono text-xs">
-            {description}
-          </CardDescription>
         </div>
       </CardHeader>
-      <CardContent className="mt-auto flex">
+      <CardContent className="mt-auto flex flex-col">
+        <CardDescription className="font-mono text-xs">
+          {description}
+        </CardDescription>
         <div className="mt-2 flex flex-wrap gap-1">
           {tags.map((tag) => (
             <Badge
@@ -71,6 +76,7 @@ export function ProjectCard({
             <Button variant={"ghost"} asChild>
               <a href={sourceLink} target="_blank">
                 <GitHubIcon className="size-4" />
+                <span className="sr-only">View source code for {title}</span>
               </a>
             </Button>
           </div>
