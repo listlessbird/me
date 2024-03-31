@@ -5,8 +5,6 @@ interface Props {
   image?: string
 }
 
-console.log(Astro.url.pathname)
-
 const { title, description, image = "" } = Astro.props
 
 const socialImg = new URL(image, Astro.url)
