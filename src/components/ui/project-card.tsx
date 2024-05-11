@@ -31,7 +31,7 @@ export function ProjectCard({
   sourceLink,
 }: Props) {
   return (
-    <Card className="flex flex-col overflow-hidden border border-muted p-3 space-y-2 h-full">
+    <Card className="flex flex-col overflow-hidden border border-muted p-3 space-y-2 h-full hover:shadow-md transition-shadow shadow-sm">
       <CardHeader className="flex">
         <div className="flex gap-2 items-center w-fit">
           {!!Icon && <Icon className="size-4 self-center" />}
@@ -59,11 +59,11 @@ export function ProjectCard({
           {description}
         </CardDescription>
         <div className="mt-2 flex flex-wrap gap-1">
-          {tags.map((tag) => (
+          {tags.map((tag, i) => (
             <Badge
               className="px-1 py-0 text-[10px]"
               variant="secondary"
-              key={tag}
+              key={tag + i}
             >
               {tag}
             </Badge>
