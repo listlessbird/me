@@ -2,6 +2,8 @@
 
 This is my personal website. It is built using [Astro](https://astro.build/), a new static site generator that I am trying out. The website is a fork of [Bartosz Jarocki's CV](https://github.com/BartoszJarocki/cv).
 
+Modify the `src/data/resume_data.tsx` file to change the content of the website.
+
 ## Astro Starter Kit: Basics
 
 ```sh
