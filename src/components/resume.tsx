@@ -104,7 +104,15 @@ export function Resume() {
           <h2 className="text-xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.skills.map((skill, i) => {
-              return <Badge key={skill + i}>{skill}</Badge>
+              return (
+                <a
+                  className="inline-flex items-center gap-1 hover:underline"
+                  href={`https://google.com/search?q=${skill}`}
+                  target="_blank"
+                >
+                  <Badge key={skill + i}>{skill}</Badge>
+                </a>
+              )
             })}
           </div>
         </Section>

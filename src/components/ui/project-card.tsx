@@ -7,7 +7,6 @@ import {
   CardFooter,
 } from "./card"
 import { Badge } from "./badge"
-
 import { GitHubIcon } from "@/components/icons/GithubIcon"
 import { Button } from "./button"
 
