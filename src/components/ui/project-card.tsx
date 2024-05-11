@@ -31,11 +31,11 @@ export function ProjectCard({
   sourceLink,
 }: Props) {
   return (
-    <Card className="flex flex-col overflow-hidden border border-muted p-3 space-y-2">
+    <Card className="flex flex-col overflow-hidden border border-muted p-3 space-y-2 h-full">
       <CardHeader className="flex">
         <div className="flex gap-2 items-center w-fit">
           {!!Icon && <Icon className="size-4 self-center" />}
-          <CardTitle className="text-base self-center">
+          <CardTitle className="text-base self-center font-bold">
             {link ? (
               <a
                 href={link}
@@ -71,7 +71,7 @@ export function ProjectCard({
         </div>
       </CardContent>
       {!!sourceLink && (
-        <CardFooter className="p-2">
+        <CardFooter className="p-2 !mt-auto">
           <div className="w-fit ml-auto">
             <Button variant={"ghost"} asChild>
               <a href={sourceLink} target="_blank">
