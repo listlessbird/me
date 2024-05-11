@@ -103,8 +103,8 @@ export function Resume() {
         <Section>
           <h2 className="text-xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-1">
-            {RESUME_DATA.skills.map((skill) => {
-              return <Badge key={skill}>{skill}</Badge>
+            {RESUME_DATA.skills.map((skill, i) => {
+              return <Badge key={skill + i}>{skill}</Badge>
             })}
           </div>
         </Section>
