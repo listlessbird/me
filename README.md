@@ -1,4 +1,8 @@
-# Astro Starter Kit: Basics
+# Me
+
+This is my personal website. It is built using [Astro](https://astro.build/), a new static site generator that I am trying out. The website is a fork of [Bartosz Jarocki's CV](https://github.com/BartoszJarocki/cv).
+
+## Astro Starter Kit: Basics
 
 ```sh
 npm create astro@latest -- --template basics
